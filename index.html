@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html>
+<head>
+<style>
+body{
+  background-color: 91fcd5;
+  margin: 0;
+  padding: 0;
+}
+.menu{
+  background-color: #00976a;
+  height:100%;
+  width: 100px;
+  float:left;
+}
+
+.menuitem, .sideline{
+  font-weight: bold;
+  font-family: arial narrow;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: 91fcd5;
+  width: 80px;
+  height: 70px;
+  padding: 1px;
+  float: left;
+}
+.menuitem{
+  cursor: pointer;
+  vertical-align:middle;
+}
+
+.sideline{
+  background-color: #006043;
+  width: 6px;
+}
+.mainf{
+  background-color: #e1fff6;
+  height:100%;
+  width: calc(100% - 100px);
+  float:left;
+}
+.mainf-sub0{
+    background-color: #006043;
+    height: 60px;
+}
+
+</style>
+<body style="font-family: Arial;">
+<div class="menu" style="text-align: center;font-style: arial; formcolor:white;">
+  <div class="menuitem" onclick="homeframe()"> <p>HOME</p> </div>  <div class=sideline></div>
+  <div class="menuitem" onclick="viewframe()"><p>ACCOUNTS</p> </div> <div class=sideline></div>
+  <div class="menuitem" onclick="registerframe()"> <p>ADD ACCOUNT</p></div> <div class=sideline></div>
+  <div class="menuitem" onclick="homeframe()"> <p></p></div> <div class=sideline></div>
+  <div class="menuitem" onclick="homeframe()"> <p></p></div> <div class=sideline></div>
+
+
+</div>
+
+<div class="mainf">
+  <div class="mainf-sub0"></div>
+<iframe id="mf" src="iframes/view.php" style="width:100%; height:calc(100% - 60px);" frameborder="0" scrolling="yes" class="Topframe"></iframe>
+</div>
+</body>
+</head>
+</html>
+
+
+<script>
+function homeframe() {document.getElementById("mf").src = "iframes/hello.html"; }
+function viewframe() {document.getElementById("mf").src = "iframes/view.php"; }
+function registerframe() {document.getElementById("mf").src = "iframes/register.php"; }
+</script>
